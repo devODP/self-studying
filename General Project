@@ -25,8 +25,8 @@ Components:
 
 "sharer" - moves around the city, has an IP address, can also have relationships with the four libraries
 
-"public computer" - client that accesses to the libraries server
+"public computer" - client that accesses to the servers of the four libraries
 
 
-intelligence - the police may learn the pattern of how the sharer moves around the city, and the sharer
+"Tracker" - the police may learn the pattern of how the sharer moves around the city, and the sharer
                 may learn to escape from the police knowing that the police's strategy
