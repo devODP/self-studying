@@ -1,0 +1,32 @@
+Project Description:
+
+Create four libraries in a city, so that a local resident can use a public computer 
+to find out book-related information from these libraries. In addition, these four 
+libraries have their own relationships (e.g library 1 may borrow books from library 2 and so on). 
+
+In addition to the four libraries, there is also another online books sharer in the city.
+In order to prevent potential copyright lawsuits from publishing books online, the online sharer
+moves around the city frequently to hide his IP address from the police.
+
+There is a police in the city.
+
+
+Objective: Implement the description above using knowledge from Algorithm, Computer Networking, 
+           Concurrency, Database management and possibly machine learning or game theory
+           
+           
+          
+
+Components:
+"library" - has a database, allows residents to look up books related information through an interactive webpage, 
+            the webpage will be created using AngularJS
+            
+"police" - moves around the city, has an ID, has a tracker to track the sharer
+
+"sharer" - moves around the city, has an IP address, can also have relationships with the four libraries
+
+"public computer" - client that accesses to the libraries server
+
+
+intelligence - the police may learn the pattern of how the sharer moves around the city, and the sharer
+                may learn to escape from the police knowing that the police's strategy
