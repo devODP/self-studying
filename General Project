@@ -30,3 +30,5 @@ Components:
 
 "Tracker" - the police may learn the pattern of how the sharer moves around the city, and the sharer
                 may learn to escape from the police knowing that the police's strategy
+                
+"City" - simple 2D array with the boundary columns and rows set to 1 to mimic boundaries
