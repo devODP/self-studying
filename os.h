@@ -23,7 +23,7 @@ int numOfThreads;
 
 void startAllocations();
 void Resource_Handler();
-void registerThread(void (*threadAddress) (void), int priority, int id);
+void registerThread(void *threadAddress, int priority, int id);
 void awakened(int thread_id);
 void pause();
 

@@ -23,7 +23,7 @@ void Resource_Handler(){
 	(*threadTable[iHighPriorityTaskIndex].address)();
 }
 
-void registerThread(void (*threadAddress) (void), int priority, int id){
+void registerThread(void *threadAddress, int priority, int id){
 	threadTable[numOfThreads].address = threadAddress;
 	threadTable[numOfThreads].priority = priority;
 	threadTable[numOfThreads].ready = 1;
