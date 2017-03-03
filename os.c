@@ -6,13 +6,15 @@
  */
 #include "os.h"
 
+numOfThreads = 0;
+
 void Resource_Handler(){
 	int index;
 
 	iHighPriorityTask =10;
 
 	for(index = 0; index < numOfThreads; index++){
-		if(threadTable[index].priority <= iHighPriorityTask && threadTable[index].ready == 1){
+		if((threadTable[index].priority <= iHighPriorityTask) && (threadTable[index].ready == 1)){
 			iHighPriorityTask = threadTable[index].priority;
 			iHighPriorityTaskIndex = index;
 		}
@@ -21,7 +23,7 @@ void Resource_Handler(){
 	(*threadTable[iHighPriorityTaskIndex].address)();
 }
 
-void registerThread(void *threadAddress, int priority, int id){
+void registerThread(void (*threadAddress) (void), int priority, int id){
 	threadTable[numOfThreads].address = threadAddress;
 	threadTable[numOfThreads].priority = priority;
 	threadTable[numOfThreads].ready = 1;
@@ -47,6 +49,5 @@ void pause(){
 }
 
 void startAllocations(){
-	numOfThreads = 0;
 	Resource_Handler();
 }

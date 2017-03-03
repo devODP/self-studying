@@ -6,11 +6,8 @@
  */
 
 #include <stdio.h>
-
 #include <stdlib.h>
-
 #include <windows.h>
-
 #include "os.h"
 
 int main() {
@@ -23,7 +20,7 @@ int main() {
 
 void Thread1() {
 	while (1) {
-		printf("Thread 1 getting resource.");
+		printf("Thread 1 getting resource. \n");
 		Sleep(1000);
 		pause();
 	}
@@ -33,6 +30,6 @@ void Thread2() {
 	while (1) {
 		printf("Thread 2 getting resource. \n");
 		Sleep(1000);
-		pause();
+		awakened(0);
 	}
 }
